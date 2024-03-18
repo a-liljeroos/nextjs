@@ -1,20 +1,22 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-// functions
-import { delay, getRandomItem, getRandomNumber } from "../utils/functions";
+import React from "react";
 // styles
 import "./ScreenGlitch.scss";
+// components
 import Flicker from "./Flicker";
-import Flash from "./Flash";
 
-const ScreenGlitch = () => {
+interface ScreenGlitchProps {
+  flickerColor?: string;
+}
+
+const ScreenGlitch = ({ flickerColor }: ScreenGlitchProps) => {
   return (
     <div className="screen-glitch select-none pointer-events-none">
       <div className="screen-glitch-c select-none pointer-events-none">
-        <Flicker />
-        <Flicker />
-        <Flicker />
+        <Flicker color={flickerColor} />
+        <Flicker color={flickerColor} />
+        <Flicker color={flickerColor} />
       </div>
     </div>
   );

@@ -13,12 +13,14 @@ import "./ScreenGlitch.scss";
 
 interface FlickerProps {
   appearanceSpeed?: { min: number; max: number };
+  color?: string;
   children?: React.ReactNode;
 }
 
 const Flicker = ({
   children,
   appearanceSpeed = { min: 3000, max: 10000 },
+  color = "white",
 }: FlickerProps) => {
   const flickerRef = useRef<HTMLDivElement>(null);
   const [styles, setStyles] = useState<React.CSSProperties>({});
@@ -35,7 +37,7 @@ const Flicker = ({
       setStyles({
         top: getRandomNumber(0, 100) + "vh",
         left: getRandomNumber(0, 100) + "vw",
-        backgroundColor: "white",
+        backgroundColor: color,
         width: "1px",
         height: height,
         opacity: "0.6",
