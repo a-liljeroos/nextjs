@@ -1,0 +1,36 @@
+$shadow: 0px 5px 15px rgb(36, 36, 36);
+
+nav {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+
+  .nav-btn {
+    box-shadow: $shadow;
+  }
+}
+
+.nav-board {
+  top: 20px;
+  height: 80vh;
+  width: 100vw;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  clip-path: polygon(1% 1%, 99% 1%, 99% 99%, 1% 99%);
+}
+
+.nav-board-content {
+  padding-top: 150px;
+  padding-left: 100px;
+  backdrop-filter: blur(0px);
+  background-color: transparent;
+  z-index: 100;
+  li {
+    background-color: rgba(118, 118, 118, 0.557);
+    padding: 10px;
+    margin: 5px;
+  }
+}
