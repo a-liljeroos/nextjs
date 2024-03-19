@@ -31,7 +31,9 @@ const Letter = ({ letter, ...props }: LetterProps) => {
         changeClass(getRandomNumber(2, 7), delayStart);
       }
     };
-    changeClass(getRandomNumber(2, 7), delayStart);
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      changeClass(getRandomNumber(2, 7), delayStart);
+    }
   }, []);
 
   if (letter === " " || letter === "") {
@@ -102,7 +104,9 @@ const LetterSpinner = ({ input }: LetterSpinnerProps) => {
         changeLetter(getRandomNumber(2, 7), delayStart);
       }
     };
-    changeLetter(8, delayStart);
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      changeLetter(8, delayStart);
+    }
   }, []);
   return (
     <div ref={letterRef} className="letter-spinner">
