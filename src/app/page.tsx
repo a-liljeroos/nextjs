@@ -18,6 +18,7 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-left justify-start relative">
         <NavMenu />
         <Section1 />
+        <Section2 />
       </main>
     </Provider>
   );
