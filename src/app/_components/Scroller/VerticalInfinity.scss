@@ -1,0 +1,18 @@
+.shake {
+  animation: shake 30s linear alternate-reverse infinite;
+}
+
+@keyframes shake {
+  from {
+    transform: rotate("10deg");
+  }
+  to {
+    transform: rotate("-10deg");
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(-50%);
+  }
+}
