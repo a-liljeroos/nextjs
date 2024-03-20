@@ -70,15 +70,14 @@ const NavMenu = () => {
     <nav>
       <button
         ref={toggleButtonRef}
-        className=" bg-purple-300 h-9 w-9 nav-btn"
-        style={{
-          clipPath: "polygon(0% 0%, 70% 0, 100% 30%, 100% 100%, 0% 100%)",
-        }}
+        className="nav-btn"
         onClick={() => {
           dispatch(toggleMenu());
           toggleBoard(isOpen);
         }}
-      ></button>
+      >
+        🤪
+      </button>
       <div className="relative">
         <div
           ref={navBoardRef}

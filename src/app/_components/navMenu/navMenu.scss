@@ -9,7 +9,9 @@ nav {
   padding: 15px;
 
   .nav-btn {
-    box-shadow: $shadow;
+    background-color: transparent;
+    outline: none;
+    font-size: 40px;
   }
 }
 
