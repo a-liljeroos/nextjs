@@ -8,17 +8,21 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
    <li>
 <pre>
     "dependencies": {
-        "@reduxjs/toolkit": "^2.2.1",
-        "next": "14.1.3",
-        "react": "^18",
-        "react-dom": "^18",
-        "react-redux": "^9.1.0"
-    },
+    "@reduxjs/toolkit": "^2.2.1",
+    "@vercel/postgres": "^0.7.2",
+    "drizzle-orm": "^0.30.4",
+    "next": "14.1.3",
+    "pg": "^8.11.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-redux": "^9.1.0"
+  },
     "devDependencies": {
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
         "autoprefixer": "^10.0.1",
+        "drizzle-kit": "^0.20.14",
         "eslint": "^8",
         "eslint-config-next": "14.1.3",
         "postcss": "^8",
