@@ -1,20 +1,30 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import ReactDOMServer from "react-dom/server";
+const beautify = require("beautify");
 // components
 import ScreenGlitch from "../screenGlitch/ScreenGlitch";
 import Section from "./Section";
 import VerticalInfinity from "../Scroller/VerticalInfinity";
+import PrintHTML from "../PrintHTML/PrintHTML";
 
 interface Section2Props {}
 
 const Section2 = ({}: Section2Props) => {
+  const ref = useRef<HTMLDivElement>(null);
+
   return (
-    <Section id="section-2" className="section-2 relative">
-      <SectionDecorations />
-    </Section>
+    <div ref={ref}>
+      <Section id="section-2" className="section-2 relative">
+        <SectionDecorations />
+        <div>
+          <PrintHTML input={<SectionDecorations />} />
+        </div>
+      </Section>
+    </div>
   );
 };
 
-const SectionDecorations = () => {
+export const SectionDecorations = () => {
   return (
     <>
       <div className="absolute sc2-bg-ext select-none pointer-events-none"></div>
