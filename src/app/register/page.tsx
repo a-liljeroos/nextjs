@@ -1,12 +1,14 @@
 "use client";
 import { signIn } from "next-auth/react";
 import React, { useRef, useEffect, useState, FormEvent } from "react";
+import Link from "next/link";
 // functions
 import { delay } from "../_components/utils/functions";
 import { isUsernameAvailable } from "./_functions/functions";
 // components
 import ScreenGlitch from "../_components/screenGlitch/ScreenGlitch";
 // styles
+import { IoMdCloseCircle } from "react-icons/io";
 import "./Register.scss";
 
 type PromptMessage = {
@@ -162,6 +164,14 @@ const Register = () => {
     <div className="flex flex-col justify-center items-center p-20 h-screen relative">
       <ScreenGlitch />
       <div className="register-machine w-96 sm:w-screen">
+        <Link href={"/"}>
+          <IoMdCloseCircle
+            className="pb-2 ml-auto"
+            size={35}
+            color="rgb(240, 240, 240)"
+            fill="rgb(240, 240, 240)"
+          />
+        </Link>
         <div className="register-screen pixelate relative">
           {promptMessages.map((message, index, array) => {
             return (
