@@ -7,16 +7,23 @@ nav {
   left: 0;
   width: 100%;
   padding: 15px;
-
-  .nav-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .menu-btn {
     background-color: transparent;
     outline: none;
     font-size: 40px;
   }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .nav-board {
-  top: 20px;
+  top: 80px;
   height: 80vh;
   width: 100vw;
   background-color: transparent;
@@ -34,5 +41,47 @@ nav {
     background-color: rgba(118, 118, 118, 0.557);
     padding: 10px;
     margin: 5px;
+  }
+}
+
+.nav-btn {
+  padding: 8px;
+  padding-inline: 15px;
+  border: 2px solid white;
+  border-radius: 5px;
+  height: min-content;
+}
+
+.login-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: transparent;
+  color: transparent;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  backdrop-filter: blur(1px);
+
+}
+
+.logout-btn {
+  margin-left: 10px;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.nav-session-data {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0 0 0 auto;
+  p {
+    text-align: right;
   }
 }
