@@ -5,10 +5,13 @@ import { z } from "zod";
 
 // api/user/register
 
-const schema = z.object({
-  username: z.string().max(20),
-  password: z.string(),
-});
+const schema = z
+  .object({
+    username: z.string().max(20),
+    password: z.string(),
+    email: z.string().email().max(60),
+  })
+  .required({ username: true, password: true });
 
 export async function POST(req: NextRequest) {
   try {
@@ -20,7 +23,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: result.error }, { status: 400 });
     }
 
-    const { username, password } = result.data;
+    const { username, password, email } = result.data;
 
     const user = await getUserByUsername(username);
     if (user.length > 0) {
@@ -32,6 +35,7 @@ export async function POST(req: NextRequest) {
     const newUser: NewUser = {
       username: username,
       password: hashedPassword,
+      email: email,
       createdAt: new Date(Date.now() + 2 * (60 * 60 * 1000)),
     };
 
