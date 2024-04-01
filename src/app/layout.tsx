@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 // auth
 import { getServerSession } from "next-auth";
 import SessionProvider from "./_components/SessionProvider/SessionProvider";
@@ -28,6 +29,7 @@ export default async function RootLayout({
       <body className={roboto.className}>
         <SessionProvider session={session}>{children}</SessionProvider>
       </body>
+      <SpeedInsights/>
     </html>
   );
 }

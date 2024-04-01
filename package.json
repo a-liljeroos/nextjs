@@ -11,6 +11,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
     "@vercel/postgres": "^0.7.2",
+    "@vercel/speed-insights": "^1.0.10",
     "bcrypt": "^5.1.1",
     "beautify": "^0.0.8",
     "drizzle-orm": "^0.30.4",
