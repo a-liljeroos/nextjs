@@ -1,7 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<h3><a href="https://nextjs-seven-steel-95.vercel.app/" target="_blank">Live @vercel 👈</a></h3>
-
 <h4>👻 Using Technologies<h4>
 <ul>
   <li>Web Animations API</li>
